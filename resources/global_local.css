@@ -229,7 +229,7 @@ body .layui-fix-select .layui-layer-content{overflow: visible;} /*layer弹出层
 .able-footer .footer-links-wrapper a{margin-right: 10px;}
 
 /* 主内容容器 */
-.able-container-body{margin-top: 15px;}
+.able-container-body{margin-top: 0px;}
 
 /* 右边栏 */
 .able-container-body-right .hot-assist dt i{font-weight: bold;color: #dd4b39;}

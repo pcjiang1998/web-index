@@ -9,7 +9,7 @@
 
 /* 全局 */
 html,body{overflow-x: hidden;}
-html body{margin-top: 12px;}
+html body{margin-top: 3px;margin-bottom: 3px;}
 html{background-color: #F2F2F2;}
 i{font-style: normal;}
 
