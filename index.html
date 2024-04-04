@@ -3,11 +3,629 @@
 <html lang="zh-CN">
 
 <head>
-<meta http-equiv="refresh" content="0;url=index/index.html"> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="csrf-param" content="_csrf">
+    <meta name="csrf-token"
+        content="AsjQ35UF1gK7WCzBqQLnBrKrQ1y8k-xaVds4KMVoAPF2i4i223yMQdRtdqroS7dTn9kaaITkg2MR7Vp7qTJNvw=="> -->
+    <!-- <title>一搜即达 | 科研人员一站式聚合搜索工具 - 科研通</title> -->
+    <title>Home Page</title>
+    <!-- <meta name="keywords" content="一搜即达, 谷歌镜像, 谷歌学术, 维基百科, 科研工具, SciHub, 搜索引擎, 文献下载, 科研通, AbleSci.com,">
+    <meta name="description" content="科研人员一站式聚合搜索工具，提供谷歌学术搜索镜像、维基百科等，整合了每日必用的搜索引擎，大大方便科研人员的资源检索效率，科研一搜，信息即达。"> -->
+    <link rel="shortcut icon" href="favicon.ico" >
+    <link rel="stylesheet" href="./resources/layui.css">
+    <!-- <link rel="stylesheet" href="https://www.ablesci.com/assets/css/iconfont-ex/iconfont.css?v=20210807"> -->
+    <link rel="stylesheet" href="./resources/global.css">
+    <link rel="stylesheet" href="./resources/global_local.css">
+    <!-- <script src="https://hm.baidu.com/hm.js?21ea3daf4a17e94a98a483d3d810f41a"></script> -->
+    <script src="./resources/layui.js"></script>
+    <link id="layuicss-laydate" rel="stylesheet" href="./resources/css/modules/laydate/default/laydate.css" media="all">
+    <link id="layuicss-layer" rel="stylesheet" href="./resources/css/modules/layer/default/layer.css" media="all">
+    <link id="layuicss-skincodecss" rel="stylesheet" href="./resources/css/modules/code.css" media="all">
+    <!-- <link id="layuicss-laydate" rel="stylesheet"
+        href="./resources/laydate.css" media="all"> 
+    <link id="layuicss-layer" rel="stylesheet"
+        href="./resources/layer.css" media="all">
+    <link id="layuicss-skincodecss" rel="stylesheet"
+        href="./resources/code.css" media="all"> -->
+
+    <style>
+    .biglink{
+        font-size: 20px;
+        color: red;
+    }
+    .commonlink{
+        font-size: 15px;
+    }
+    .smalllink{
+        font-size: 10px;
+    }
+    .mininote{
+        font-size: 1px;
+    }
+    </style>
 </head>
 
 
 <body style="margin-left: 0px;">
+    <div class="layui-container able-container-body so-page">
+        <div class="fly-panel" pad20="" style="padding-top: 5px;">
+            <div class="layui-row">
+                <div class="layui-col-sm2 so-category">
+                    <div class="so-category-top-tips">分类</div>
+
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0)" data-id="hot"
+                                class="so-category-item so-category-id-hot layui-this">热门</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" data-id="academic"
+                                class="so-category-item so-category-id-academic">学术</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" data-id="search"
+                                class="so-category-item so-category-id-search">搜索</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" data-id="codeing"
+                                class="so-category-item so-category-id-codeing">编程</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" data-id="video"
+                                class="so-category-item so-category-id-video">视频</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" data-id="social"
+                                class="so-category-item so-category-id-social">社区</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" data-id="english"
+                                class="so-category-item so-category-id-english">英语</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" data-id="course"
+                                class="so-category-item so-category-id-course">课程</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" data-id="image"
+                                class="so-category-item so-category-id-image">图片</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" data-id="daily"
+                                class="so-category-item so-category-id-daily">生活</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="layui-col-sm9">
+                    <div>
+                        <!--<div class="so-header">
+                            <h1 class="so-header-title">一搜即达</h1>
+                            <h2 class="so-header-intro">科研人员一站式聚合搜索工具</h2>
+                        </div>-->
+                        <div class="so-header" style="text-align:center">
+                            <a class="so-header-title">一搜即达</a><a class="so-header-intro">科研人员一站式聚合搜索工具</a>
+                            <a class="smalllink" href="https://www.ablesci.com/so">修改自ablesci</a>
+                        </div>
+                    </div>
+
+                    <div class="so-input-div">
+                        <form class="layui-form" action="https://www.ablesci.com/so" target="_blank" method="get">
+                            <div class="layui-form-item so-site">
+                                <!-- 热门（默认选项） -->
+                                <div class="layui-tab so-site-tab so-category-id-hot" style="display: block;">
+                                    <ul class="layui-tab-title">
+                                        <li title="中文最大的搜索引擎" data-url="https://www.baidu.com/s?wd=" data-id="baidu"
+                                            data-note="" class="so-site-item so-site-id-baidu layui-this">百度</li>
+                                        <li title="Google搜索" data-url="https://www.google.com/search?q="
+                                            data-id="google" data-note="确保网络可达" class="so-site-item so-site-id-google">
+                                            Google搜索</li>
+                                        <li title="GitHub" data-url="https://github.com/search?q=" data-id="github" class="so-site-item so-site-id-github"
+                                            data-note="可以加上：“org:组织名”或者“user:用户名”（必须精确，否则不要用）">GitHub</li>
+                                        <li title="必应搜索" data-url="https://www.bing.com/search?q=" data-id="bingchina"
+                                            data-note="必应搜索（国内版），适合搜索中文资料" class="so-site-item so-site-id-bing">必应(ZH)</li>
+                                        <li title="必应搜索" data-url="https://www.bing.com/search?q=" data-id="bing"
+                                            data-note="必应搜索（国际版），适合搜索英文资料" class="so-site-item so-site-id-bing">必应(EN)</li>
+                                        <li title="Wiki搜索" data-url="http://www.wiki.com/results1.htm?cx=009420061493499222400%3Ae8sof1xaq-u&q=" data-id="wiki"
+                                            data-note="wikipedia，indie wiki和sencyclopedias的聚合搜索" class="so-site-item so-site-id-wiki">Wiki</li>
+                                        <li title="Google学术" data-url="https://scholar.google.com/scholar?hl=zh-CN&q="
+                                            data-id="academicgoogle" data-note="确保网络可达"
+                                            class="so-site-item so-site-id-academicgoogle">Google学术</li>
+                                        <li title="免费文献下载" data-url="https://sci-hub.st/" data-id="scihub"
+                                            data-note="请输入文献的标题、doi、url，直达SciHub可用站点（不支持文献搜索，只可下载唯一存在的论文）"
+                                            class="so-site-item so-site-id-scihub">SciHub</li>
+                                        <li title="中文最大的论文出版平台"
+                                            data-url="https://kns.cnki.net/kns/brief/default_result.aspx?txt_1_sel=SU$%=|&amp;txt_1_special1=%&amp;txt_extension=&amp;currentid=txt_1_value1&amp;dbJson=coreJson&amp;dbPrefix=SCDB&amp;db_opt=CJFQ,CDFD,CMFD,CPFD,IPFD,CCND,CCJD&amp;singleDB=SCDB&amp;db_codes=CJFQ,CDFD,CMFD,CPFD,IPFD,CCND,CCJD&amp;singleDBName=&amp;againConfigJson=false&amp;action=scdbsearch&amp;ua=1.11&amp;txt_1_value1="
+                                            data-id="cnki" data-note="适合搜索中文文献" class="so-site-item so-site-id-cnki">
+                                            中国知网</li>
+                                        
+                                    </ul>
+                                </div>
+
+                                <!-- 学术 -->
+                                <div class="layui-tab so-site-tab so-category-id-academic" style="display: none;">
+                                    <ul class="layui-tab-title">
+                                        <li title="谷歌学术" data-url="https://scholar.google.com/scholar?hl=zh-CN&q="
+                                            data-id="academicgoogle" data-note="确保网络可达"
+                                            class="so-site-item so-site-id-academicgoogle layui-this">谷歌学术</li>
+                                        <li title="谷歌镜像" data-url="https://xs2.studiodahu.com/scholar?hl=zh-CN&as_sdt=0%2C5&q="
+                                            data-id="academicgooglemirror" data-note="不需要科学上网"
+                                            class="so-site-item so-site-id-academicgooglemirror">谷歌镜像</li>
+                                        <li title="ResearchGate" data-url="https://www.researchgate.net/search.Search.html?query="
+                                            data-id="researchgate" data-note=""
+                                            class="so-site-item so-site-id-researchgate">ResearchGate</li>
+                                        <li title="免费文献下载" data-url="https://sci-hub.st/" data-id="scihub"
+                                            data-note="请输入文献的标题、doi、url，直达SciHub可用站点（不支持文献搜索，只可下载唯一存在的论文）"
+                                            class="so-site-item so-site-id-scihub">SciHub</li>
+                                        <li title="semanticscholar" data-url="https://www.semanticscholar.org/search?sort=relevance&q=" data-id="semanticscholar"
+                                            data-note="不需要科学上网"
+                                            class="so-site-item so-site-id-semanticscholar">Semantic</li>
+                                        <li title="百度学术" data-url="https://xueshu.baidu.com/s?wd=" data-id="xueshubaidu"
+                                            data-note="" class="so-site-item so-site-id-xueshubaidu">百度学术</li>
+                                        <li title="中文最大的论文出版平台"
+                                            data-url="https://kns.cnki.net/kns/brief/default_result.aspx?txt_1_sel=SU$%=|&amp;txt_1_special1=%&amp;txt_extension=&amp;currentid=txt_1_value1&amp;dbJson=coreJson&amp;dbPrefix=SCDB&amp;db_opt=CJFQ,CDFD,CMFD,CPFD,IPFD,CCND,CCJD&amp;singleDB=SCDB&amp;db_codes=CJFQ,CDFD,CMFD,CPFD,IPFD,CCND,CCJD&amp;singleDBName=&amp;againConfigJson=false&amp;action=scdbsearch&amp;ua=1.11&amp;txt_1_value1="
+                                            data-id="cnki" data-note="适合搜索中文文献" class="so-site-item so-site-id-cnki">
+                                            中国知网</li>
+                                        <li title="微软学术" data-url="https://academic.microsoft.com/search?q="
+                                            data-id="academicmicrosoft" data-note=""
+                                            class="so-site-item so-site-id-academicmicrosoft">微软学术</li>
+                                        <li title="方便快捷的期刊查询平台"
+                                            data-url="https://www.ablesci.com/journal/index?keywords="
+                                            data-id="ablescijournal" data-note="请输入期刊名称或ISSN"
+                                            class="so-site-item so-site-id-ablescijournal">期刊查询</li>
+                                        <li title="万方数据知识服务平台"
+                                            data-url="http://www.wanfangdata.com.cn/search/searchList.do?searchType=all&amp;showType=&amp;pageSize=&amp;isTriggerTag=&amp;searchWord="
+                                            data-id="wangfang" data-note="适合搜索中文文献"
+                                            class="so-site-item so-site-id-wangfang">万方</li>
+                                    </ul>
+                                </div>
+                                
+                                <!-- 编程 -->
+                                <div class="layui-tab so-site-tab so-category-id-codeing" style="display: none;">
+                                    <ul class="layui-tab-title">
+                                        <li title="GitHub" data-url="https://github.com/search?q=" class="so-site-item so-site-id-github layui-this"
+                                            data-note="可以加上：“org:组织名”或者“user:用户名”（必须精确，否则不要用）" data-id="github">GitHub</li>
+                                        <li title="面向互联网技术人的内容社区" data-url="https://juejin.im/search?query="
+                                            data-id="juejin" data-note="" class="so-site-item so-site-id-juejin">掘金
+                                        </li>
+                                        <li title="IT技术问答网站" data-url="https://stackoverflow.com/search?q="
+                                            data-id="stackoverflow" data-note=""
+                                            class="so-site-item so-site-id-stackoverflow">StackOverflow</li>
+                                        <li title="中国领先的开发者社区" data-url="https://segmentfault.com/search?q="
+                                            data-id="segmentfault" data-note=""
+                                            class="so-site-item so-site-id-segmentfault">SegmentFault</li>
+                                    </ul>
+                                </div>
+                                
+                                <!-- 搜索 -->
+                                <div class="layui-tab so-site-tab so-category-id-search" style="display: none;">
+                                    <ul class="layui-tab-title">
+                                        <li title="Google搜索" data-url="https://www.google.com/search?q="
+                                            data-id="google" data-note="确保网络可达" class="so-site-item so-site-id-google">
+                                            Google搜索</li>
+                                        <li title="中文最大的搜索引擎" data-url="https://www.baidu.com/s?wd=" data-id="baidu"
+                                            data-note="" class="so-site-item so-site-id-baidu">百度</li>
+                                        <li title="必应搜索" data-url="https://www.bing.com/search?q=" data-id="bingchina"
+                                            data-note="必应搜索（国内版），适合搜索中文资料" class="so-site-item so-site-id-bing">必应(ZH)</li>
+                                        <li title="必应搜索" data-url="https://www.bing.com/search?q=" data-id="bing"
+                                            data-note="必应搜索（国际版），适合搜索英文资料" class="so-site-item so-site-id-bing">必应(EN)</li>
+                                        <li title="Wiki搜索" data-url="http://www.wiki.com/results1.htm?cx=009420061493499222400%3Ae8sof1xaq-u&q=" data-id="wiki"
+                                            data-note="wikipedia，indie wiki和sencyclopedias的聚合搜索" class="so-site-item so-site-id-wiki">Wiki</li>
+                                        <li title="俄罗斯第一大搜索引擎" data-url="https://yandex.com/search/?text="
+                                            data-id="yandex" data-note="" class="so-site-item so-site-id-yandex">
+                                            Yandex</li>
+                                        <li title="在线自动问答系统和计算知识引擎" data-url="https://www.wolframalpha.com/input/?i="
+                                            data-id="wolframalpha" data-note=""
+                                            class="so-site-item so-site-id-wolframalpha">WolframAlpha</li>
+                                        <li title="搜狗搜索" data-url="https://www.sogou.com/sogou?query=" data-id="sogou"
+                                            data-note="" class="so-site-item so-site-id-sogou">搜狗</li>
+                                    </ul>
+                                </div>
+
+                                <!-- 英语 -->
+                                <div class="layui-tab so-site-tab so-category-id-english" style="display: none;">
+                                    <ul class="layui-tab-title">
+                                        <li title="有道词典" data-url="http://dict.youdao.com/w/eng/" data-id="dictyoudao"
+                                            data-note="" class="so-site-item so-site-id-dictyoudao layui-this">有道词典
+                                        </li>
+                                        <li title="科林斯词典"
+                                            data-url="https://www.collinsdictionary.com/zh/dictionary/english/"
+                                            data-id="collinsdictionary" data-note=""
+                                            class="so-site-item so-site-id-collinsdictionary">科林斯词典</li>
+                                        <li title="查专业词汇很不错，有例句" data-url="http://dict.cnki.net/dict_result.aspx?scw="
+                                            data-id="dictcnki" data-note="" class="so-site-item so-site-id-dictcnki">
+                                            CNKI翻译</li>
+                                        <li title="Bing翻译，微软出品" data-url="https://cn.bing.com/dict/search?q=physical"
+                                            data-id="dictbing" data-note="" class="so-site-item so-site-id-dictbing">
+                                            Bing翻译</li>
+                                        <li title="海词词典" data-url="https://dict.cn/search?q=" data-id="dict"
+                                            data-note="" class="so-site-item so-site-id-dict">海词词典</li>
+                                    </ul>
+                                </div>
+
+                                <!-- 课程 -->
+                                <div class="layui-tab so-site-tab so-category-id-course" style="display: none;">
+                                    <ul class="layui-tab-title">
+                                        <li title="国家精品课程在线学习平台"
+                                            data-url="https://www.icourse163.org/search.htm?search="
+                                            data-id="icourse163" data-note=""
+                                            class="so-site-item so-site-id-icourse163 layui-this">中国大学MOOC(慕课)</li>
+                                        <li title="随时随地上名校公开课" data-url="https://open.163.com/newview/search/Ted?query="
+                                            data-id="163open" data-note="" class="so-site-item so-site-id-163open">
+                                            网易公开课</li>
+                                        <li title="美国名校免费在线公开课" data-url="https://www.coursera.org/search?query=react"
+                                            data-id="coursera" data-note="" class="so-site-item so-site-id-coursera">
+                                            Coursera</li>
+                                        <li title="专注职业技能提升的在线学习平台"
+                                            data-url="https://study.163.com/courses-search?keyword=" data-id="163study"
+                                            data-note="" class="so-site-item so-site-id-163study">网易云课堂</li>
+                                    </ul>
+                                </div>
+                                
+                                <!-- 社区 -->
+                                <div class="layui-tab so-site-tab so-category-id-social" style="display: none;">
+                                    <ul class="layui-tab-title">
+                                        <li title="知乎，知识分享问答社区"
+                                            data-url="https://www.zhihu.com/search?type=content&amp;q=" data-id="zhihu"
+                                            data-note="" class="so-site-item so-site-id-zhihu layui-this">知乎</li>
+                                        <li title="医学知识分享网站" data-url="https://search.dxy.cn/?words=" data-id="dxy"
+                                            data-note="" class="so-site-item so-site-id-dxy">丁香园</li>
+                                        <li title="问答SNS网站" data-url="https://www.quora.com/search?q=" data-id="quora"
+                                            data-note="" class="so-site-item so-site-id-quora">Quora</li>
+                                        <li title="中文最大的微博社区" data-url="http://s.weibo.com/weibo/=" data-id="weibo"
+                                            data-note="" class="so-site-item so-site-id-weibo">微博</li>
+                                        <li title="新型社区网络" data-url="https://www.douban.com/search?q=" data-id="douban"
+                                            data-note="" class="so-site-item so-site-id-douban">豆瓣</li>
+                                    </ul>
+                                </div>
+
+                                <!-- 视频 -->
+                                <div class="layui-tab so-site-tab so-category-id-video" style="display: none;">
+                                    <ul class="layui-tab-title">
+                                        <li title="知名的视频弹幕网站" data-url="https://search.bilibili.com/all?keyword="
+                                            data-id="bilibili" data-note=""
+                                            class="so-site-item so-site-id-bilibili layui-this">哔哩哔哩</li>
+                                        <li title="腾讯视频" data-url="https://v.qq.com/x/search/?q=" data-id="vqq"
+                                            data-note="" class="so-site-item so-site-id-vqq">腾讯视频</li>
+                                        <li title="专注于发现与分享音乐" data-url="https://music.163.com/#/search/m/?s="
+                                            data-id="163music" data-note="" class="so-site-item so-site-id-163music">
+                                            网易云音乐</li>
+                                        <li title="爱奇艺" data-url="https://so.iqiyi.com/so/q_" data-id="iqiyi"
+                                            data-note="" class="so-site-item so-site-id-iqiyi">爱奇艺</li>
+                                        <li title="优酷" data-url="https://so.youku.com/search_video/q_" data-id="youku"
+                                            data-note="" class="so-site-item so-site-id-youku">优酷</li>
+                                    </ul>
+                                </div>
+
+                                <!-- 图片 -->
+                                <div class="layui-tab so-site-tab so-category-id-image" style="display: none;">
+                                    <ul class="layui-tab-title">
+                                        <li title="必应图片搜索" data-url="https://cn.bing.com/images/search?q="
+                                            data-id="bingimg" data-note=""
+                                            class="so-site-item so-site-id-bingimg layui-this">必应</li>
+                                        <li title="表情包搜索网站" data-url="http://www.dbbqb.com/s?w=" data-id="dbbqb"
+                                            data-note="" class="so-site-item so-site-id-dbbqb">逗比拯救世界</li>
+                                        <li title="阿里巴巴矢量图标库"
+                                            data-url="https://www.iconfont.cn/search/index?searchType=icon&amp;q="
+                                            data-id="iconfont" data-note="" class="so-site-item so-site-id-iconfont">
+                                            Iconfont</li>
+                                        <li title="GIF动图中文搜索引擎" data-url="http://www.weshineapp.com/search?q="
+                                            data-id="weshineapp" data-note=""
+                                            class="so-site-item so-site-id-weshineapp">闪萌</li>
+                                    </ul>
+                                </div>
+
+                                <!-- 生活 -->
+                                <div class="layui-tab so-site-tab so-category-id-daily" style="display: none;">
+                                    <ul class="layui-tab-title">
+                                        <li title="个人与企业信息查询" data-url="https://www.tianyancha.com/search?key="
+                                            data-id="tianyancha" data-note=""
+                                            class="so-site-item so-site-id-tianyancha layui-this">天眼查</li>
+                                        <li title="查快递,寄快递,上快递100" data-url="https://m.kuaidi100.com/result.jsp?nu="
+                                            data-id="kuaidi" data-note="" class="so-site-item so-site-id-kuaidi">查快递
+                                        </li>
+                                        <li title="只要你想到的都能买到" data-url="https://s.taobao.com/search?q="
+                                            data-id="taobao" data-note="" class="so-site-item so-site-id-taobao">淘宝
+                                        </li>
+                                        <li title="专业综合网上购物商城" data-url="https://search.jd.com/Search?keyword="
+                                            data-id="jd" data-note="" class="so-site-item so-site-id-jd">京东</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                            <div class="layui-form-item  layui-input-block"="" style="margin-left: 0px">
+                                <button class="layui-btn layui-btn-normal so-submit-btn" lay-filter="do-submit"
+                                    lay-submit="">去搜索</button>
+                                <input class="layui-input keywords-input" type="text" name="q" value="" required=""
+                                    lay-verify="required" placeholder="请输入关键词" autocomplete="off">
+                            </div>
+                            <div class="layui-input-block so-site-tips" style="margin-left: 0px">提示信息：</div>
+                        </form>
+                    </div>
+
+                    <div class="layui-form-item so-bottom-tips">
+                        <div>
+                            信息查询: | 
+                            <a class="biglink" href="https://www.ablesci.com/journal">查分区IF</a> | 
+                            <a class="commonlink" href="https://www.letpub.com.cn/index.php?page=journalapp&view=search">Letpub</a> | 
+                            <a class="commonlink" href="http://muchong.com/bbs">小木虫</a> | 
+                            <a class="smalllink" href="https://ccfddl.github.io">CS会议DDL</a> | 
+                            <a class="commonlink" href="https://www.medsci.cn/sci/nsfc.do">自科基金查询</a> | 
+                            <a class="smalllink" href="http://fund.keyanzhiku.com/">自科基金查询</a> | 
+                            <a class="smalllink" href="http://www.soopat.com/">专利搜索</a> | 
+                            <a class="commonlink" href="https://mirror.nju.edu.cn">南大镜像</a> | 
+                            <a class="commonlink" href="https://mirrors.tuna.tsinghua.edu.cn">清华镜像</a> | 
+                        </div>
+                        <hr >
+                        <div>
+                            翻译: | 
+                            <a class="biglink" href="https://www.deepl.com/translator">DeepL</a> | 
+                            <a class="commonlink" href="https://fanyi.qq.com">腾讯翻译君</a> | 
+                            <a class="biglink" href="https://fanyi.baidu.com/#en/zh/">百度</a> | 
+                            <a class="smalllink" href="https://translate.alibaba.com">阿里</a> | 
+                            <a class="biglink" href="https://fanyi.youdao.com">有道</a> | 
+                            <a class="smalllink" href="https://translate.google.com">Google</a> | 
+                            <a class="smalllink" href="https://cn.bing.com/translator">Bing</a> | 
+                            <a class="biglink" href="https://dict.cnki.net/index">CNKI</a> | 
+                            <a class="smalllink" href="https://fanyi.caiyunapp.com/#/">彩云</a> | 
+                            <a class="smalllink" href="https://ai.youdao.com/product-fanyi-text.s">智云</a> | 
+                            <a class="commonlink" href="https://fanyipdf.com/">一帆</a> | 
+                            <a class="smalllink" href="https://www.scidown.cn/fanyi.html">SCIDown</a> | 
+                            <a class="smalllink" href="https://openl.club">OpenL聚合</a> | 
+                            <a class="smalllink" href="https://fanyi.sogou.com/text">搜狗</a> | 
+                            <a class="biglink" href="https://niutrans.com/Trans?type=text">小牛文档</a> | 
+                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+                        </div>
+                        <hr >
+                        <div>
+                            邮箱: | 
+                            <a class="biglink" href="https://exmail.qq.com/cgi-bin/loginpage">企业邮</a> | 
+                            <a class="commonlink" href="https://mail.qq.com/">QQ邮箱</a> | 
+                            <a class="commonlink" href="https://mail.163.com/">163</a> | 
+                            <a class="commonlink" href="https://mail.126.com/">126</a> | 
+                            <a class="commonlink" href="https://outlook.live.com/">Outlook</a> | 
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            校园链接: | 
+                            <a class="commonlink" href="http://10.255.255.46/#/login">INUIST</a> | 
+                            <a class="biglink" href="https://mail.nuist.edu.cn/">邮箱</a>| 
+                            <a class="smalllink" href="https://i.nuist.edu.cn/index.html#/">融合门户</a> | 
+                            <a class="smalllink" href="https://yjs.nuist.edu.cn/">研究生院</a> | 
+                            <a class="smalllink" href="https://www.nuist.edu.cn/main.htm">学校官网</a> | 
+                            <a class="smalllink" href="https://www.nuist.edu.cn/875/list.htm">院系部门</a> | 
+                            <a class="smalllink" href="https://client.vpn.nuist.edu.cn/enlink/sso/login">VPN</a> | 
+                        </div>
+                        <hr >
+                        <div>
+                            工具: | 
+                            <a class="biglink" href="https://github.com/">Github</a> | 
+                            <a class="biglink" href="https://test.nju.edu.cn/">测网速</a>
+                            <a class="mininote" href="https://test.nju.edu.cn/">南大</a>
+                            <a class="mininote" href="https://www.speedtest.cn/">公共</a> | 
+                            <a class="smalllink" href="https://c.runoob.com/">菜鸟工具</a> |
+                            <a class="biglink" href="https://okmiku.com/">MikuTools</a> |
+                            <a class="commonlink" href="https://codetoimg.com/">Code2Img</a> | 
+                            <a class="smalllink" href="https://www.desmos.com/calculator">公式可视化</a> | 
+                            <a class="commonlink" href="https://regex101.com">正则工具</a> | 
+                            <a class="commonlink" href="https://sqliteviewer.app">SQLite</a> | 
+                            <a class="commonlink" href="https://jsvine.github.io/nbpreview/">Jupyter</a> | 
+                        </div>
+                        <hr >
+                        <div>
+                            写作: | 
+                            <a class="biglink" href="https://app.grammarly.com/">Grammarly</a> | 
+                            <a class="biglink" href="https://write.youdao.com/#/home">有道写作</a> | 
+                            <a class="commonlink" href="https://www.deepl.com/write">DeepL写作</a> | 
+                            <a class="commonlink" href="https://fanyipdf.com/rewrite">一帆改写</a> | 
+                            <a class="smalllink" href="https://zbib.org/">Zbib</a> | 
+                            <a class="biglink" href="https://cn.overleaf.com/login">Overleaf</a> | 
+                            <a class="commonlink" href="https://www.tablesgenerator.com">Latex表格</a> | 
+                            <a class="smalllink" href="https://www.latexlive.com/home">Latex公式</a> | 
+                            <a class="smalllink" href="https://www.bruot.org/ris2bib/">RIS转bib</a> | 
+                            <a class="commonlink" href="https://ai.toedit.com/cg/login">toedit工具包</a> | 
+                        </div>
+                        <hr >
+                        <div>
+                            学术: | 
+                            <a class="biglink" href="https://www.connectedpapers.com/">ConnectedPapers</a> | 
+                            <a class="commonlink" href="https://scite.ai/home">Scite</a> | 
+                            <a class="commonlink" href="https://www.paper-digest.com/">AI论文速览</a> | 
+                            <a class="commonlink" href="https://www.crossref.org/">Crossref</a> | 
+                            <a class="biglink" href="https://readpaper.com/">ReadPaper</a> | 
+                            <a class="commonlink" href="https://www.researcher-app.com/feed/all">Researcher</a> | 
+                        </div>
+                        <hr >
+                        <div>
+                            Chat: | 
+                            <a class="biglink" href="https://chat.openai.com">ChatGPT</a> | 
+                            <a class="commonlink" href="https://bard.google.com/chat">谷歌Bard</a> | 
+                            <a class="smalllink" href="https://www.anthropic.com/">Claude</a> | 
+                            <a class="smalllink" href="https://www.bing.com/chat">NewBing</a> | 
+                            <a class="biglink" href="https://www.chatpdf.com/">ChatPDF</a> | 
+                            <a class="commonlink" href="https://yiyan.baidu.com/">文心</a> | 
+                            <a class="commonlink" href="https://chat.baidu.com/">百度AI搜索</a> | 
+                            <a class="commonlink" href="https://tongyi.aliyun.com/qianwen">阿里通义</a> | 
+                            <a class="commonlink" href="https://hunyuan.tencent.com/">腾讯混元</a> | 
+                            <a class="smalllink" href="https://www.notion.so/">NotionAI</a> |
+                            <a class="commonlink" href="https://www.aigc520.com/">AI工具大全</a> | 
+                        </div>
+                        <hr >
+                        <div>
+                            画图: | 
+                            <a class="biglink" href="https://numpy.org/doc/stable/reference/index.html">numpy</a> | 
+                            <a class="biglink" href="https://pandas.pydata.org/docs/reference/index.html#api">pandas</a> | 
+                            <a class="commonlink" href="https://docs.scipy.org/doc/scipy/reference/">scipy</a> | 
+                            <a class="commonlink" href="https://scikit-learn.org/stable/getting_started.html">sklearn</a> | 
+                            <a class="smalllink" href="https://scikit-image.org/docs/stable/">skimage</a> | 
+                            <a class="biglink" href="https://matplotlib.org">matplot</a> | 
+                            <a class="commonlink" href="http://seaborn.pydata.org/installing.html">seabron</a> | 
+                            <a class="smalllink" href="https://imageio.readthedocs.io/en/stable/">imageio</a> | 
+                            <a class="biglink" href="https://www.ncl.ucar.edu/">NCL(官)</a>/<a class="biglink" href="https://ncl.readthedocs.io/zh_CN/latest/">(中)</a> | 
+                        </div>
+                        <div>
+                            ML计算: | 
+                            <a class="biglink" href="https://pytorch.org/docs/stable/">pytorch</a> | 
+                            <a class="commonlink" href="https://tensorflow.google.cn/api_docs">TF</a> | 
+                            <a class="smalllink" href="https://www.paddlepaddle.org.cn">Paddle</a> | 
+                            <a class="biglink" href="https://github.com/huggingface/pytorch-image-models">Timm</a> | 
+                            <a class="biglink" href="https://pymoo.org/index.html">pymoo</a> | 
+                            <a class="smalllink" href="http://geatpy.com/index.php/quickstart/">Geatpy</a> | 
+                            <a class="smalllink" href="https://deap.readthedocs.io/en/master/">DEAP</a> | 
+                            <a class="biglink" href="https://huggingface.co/">huggingface</a> | 
+                            <a class="commonlink" href="https://www.pytorchlightning.ai/tutorials">pytorch-lightning</a> | 
+                            <a class="commonlink" href="https://tensorboard-pytorch.readthedocs.io/en/latest/tensorboard.html">tensorboardX</a> | 
+                        </div>
+                        <hr >
+                        <div>
+                            期刊: | 
+                            <a class="biglink" href="https://www.webofscience.com/wos/alldb/basic-search">Web of Science</a> | 
+                            <a class="commonlink" href="https://www.sciencedirect.com/">Elsevier</a> | 
+                            <a class="commonlink" href="https://link.springer.com/">Springer</a> |
+                            <a class="commonlink" href="https://www.nature.com/">Nature</a> | 
+                            <a class="commonlink" href="https://onlinelibrary.wiley.com/">Wiley</a> |
+                            <a class="commonlink" href="https://iopscience.iop.org/">IOP</a> | 
+                            <a class="commonlink" href="http://www.egu.eu/publications/open-access-journals/">EGU</a> | 
+                            <a class="commonlink" href="http://journals.ametsoc.org/">AMS</a> | 
+                            <a class="commonlink" href="https://www.sciencemag.org/">Science</a> |
+                            <a class="biglink" href="https://www.researchgate.net/">ResearchGate</a> | 
+                        </div>
+                        <div>
+                            <a class="biglink" href="https://oversea.cnki.net/index/">海外知网</a> | 
+                            <a class="biglink" href="https://www.cnki.net">知网</a> | 
+                            <a class="smalllink" href="https://www.engineeringvillage.com/">EI检索</a> | 
+                            <a class="smalllink" href="https://www.proquest.com/">ProQuest</a> | 
+                            <a class="biglink" href="https://ieeexplore.ieee.org/Xplore/home.jsp">IEEE Xplore</a> | 
+                            <a class="smalllink" href="https://papers.nips.cc">NIPS</a> | 
+                            <a class="smalllink" href="https://jmlr.org/papers/">JMLR</a> | 
+                            <a class="biglink" href="https://dl.acm.org/">ACM</a> | 
+                            <a class="smalllink" href="https://dblp.uni-trier.de/">DBLP</a> | 
+                            <a class="commonlink" href="https://openreview.net/">OpenReview</a> | 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        layui.use(['jquery', 'layer', 'form', 'element'], function () {
+            var $ = layui.jquery,
+                layer = layui.layer,
+                element = layui.element,
+                form = layui.form;
+
+            var t_0 = $('.keywords-input').val(); //为了使光标移到最后
+            $('.keywords-input').val('').focus().val(t_0);
+
+            //触发第一个直接显示搜索框下面的提示，否则必须点击才可以显示
+            var note = $('.so-site  .so-category-id-' + $('.so-category-item:eq(0)').attr('data-id') + ' .layui-this').attr('data-note');
+            if (note == null) { note = ''; }
+            if (note != '') {
+                $('.so-site-tips').html(note);
+            } else {
+                $('.so-site-tips').html('');
+            }
+
+            $('.so-category-item').bind('click', function () {
+                $('.so-category-item').removeClass('layui-this');
+                $(this).addClass('layui-this');
+                $('.so-site .so-site-tab').hide();
+                $('.so-site .so-category-id-' + $(this).attr('data-id')).show();
+
+                var note = $('.so-site .so-category-id-' + $(this).attr('data-id') + ' .layui-this').attr('data-note');
+                if (note == null) { note = ''; }
+                if (note != '') {
+                    $('.so-site-tips').html(note);
+                } else {
+                    $('.so-site-tips').html('');
+                }
+            });
+
+            $('.so-site-item').bind('click', function () {
+                var note = $(this).attr('data-note');
+                if (note == null) { note = ''; }
+                if (note != '') {
+                    $('.so-site-tips').html(note);
+                } else {
+                    $('.so-site-tips').html('');
+                }
+            });
+
+            //使用POST方式打开界面
+            function doOpenPostWin(url, args, name, windowParam) {
+                //创建表单对象
+                var _form = $("<form></form>", {
+                    'id': 'tempForm',
+                    'method': 'post',
+                    'action': url,
+                    'target': name,
+                    'style': 'display:none'
+                }).appendTo($("body"));
+                //将隐藏域加入表单
+                for (var i in args) {
+                    _form.append($("<input>", { 'type': 'hidden', 'name': args[i].name, 'value': args[i].value }));
+                }
+                //绑定提交触发事件
+                _form.bind('submit', function () {
+                    window.open("about:blank", name, windowParam);
+                });
+                //触发提交事件
+                _form.trigger("submit");
+                //表单删除
+                _form.remove();
+            }
+
+            //post方式传入数据打开页面
+            //n==true表示在新页面发开
+            function openBlank(action, data, n) {
+                var form = $("<form/>").attr('action', action).attr('method', 'post');
+                if (n)
+                    form.attr('target', '_blank');
+                var input = '';
+                $.each(data, function (i, n) {
+                    input += '<input type="hidden" name="' + i + '" value="' + n + '" />';
+                });
+                form.append(input).appendTo("body").css('display', 'none').submit();
+            }
+
+            form.on('submit(do-submit)', function (data) {
+                var url = $('.so-site .so-site-tab .layui-this:visible').attr('data-url');
+                var id = $('.so-site .so-site-tab .layui-this:visible').attr('data-id');
+
+                var keywords = $.trim($('.keywords-input').val());
+                if (keywords == '') {
+                    layer.msg("请输入关键词", { icon: 5, anim: 6 });
+                    $('.keywords-input').focus();
+                    return false;
+                }
+
+                if (id == 'scihub') { //使用POST提交
+                    openBlank(url, { 'sci-hub-plugin-check': '', 'request': (keywords) }, false);
+                } else if (id == 'bing'){
+                    window.location.href=url + encodeURIComponent(keywords)+"&ensearch=1"; 
+                } else if (id == 'bingchina'){
+                    window.location.href=url + encodeURIComponent(keywords)+"&ensearch=0"; 
+                } else {
+                    //get提交
+                    // window.open(url + encodeURIComponent(keywords));
+                    window.location.href=url + encodeURIComponent(keywords); 
+                }
+
+                $.ajax({
+                    type: 'get',
+                    async: true,
+                    url: '/so/search-add',
+                    data: { 'id': id, 'q': encodeURIComponent(keywords), 'r': new Date().getTime() }
+                });
+
+                return false;
+            });
+        });
+    </script>
+
+
 </body>
 
 </html>
