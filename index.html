@@ -117,8 +117,10 @@
                                 <!-- 热门（默认选项） -->
                                 <div class="layui-tab so-site-tab so-category-id-hot" style="display: block;">
                                     <ul class="layui-tab-title">
+                                        <li title="DuckGo" data-url="https://duckduckgo.com/q=" data-id="DuckGo"
+                                            data-note="" class="so-site-item so-site-id-DuckGo layui-this">DuckGo</li>
                                         <li title="中文最大的搜索引擎" data-url="https://www.baidu.com/s?wd=" data-id="baidu"
-                                            data-note="" class="so-site-item so-site-id-baidu layui-this">百度</li>
+                                            data-note="" class="so-site-item so-site-id-baidu">百度</li>
                                         <li title="Google搜索" data-url="https://www.google.com/search?q="
                                             data-id="google" data-note="确保网络可达" class="so-site-item so-site-id-google">
                                             Google搜索</li>
@@ -128,8 +130,6 @@
                                             data-note="必应搜索（国内版），适合搜索中文资料" class="so-site-item so-site-id-bing">必应(ZH)</li>
                                         <li title="必应搜索" data-url="https://www.bing.com/search?q=" data-id="bing"
                                             data-note="必应搜索（国际版），适合搜索英文资料" class="so-site-item so-site-id-bing">必应(EN)</li>
-                                        <li title="Wiki搜索" data-url="http://www.wiki.com/results1.htm?cx=009420061493499222400%3Ae8sof1xaq-u&q=" data-id="wiki"
-                                            data-note="wikipedia，indie wiki和sencyclopedias的聚合搜索" class="so-site-item so-site-id-wiki">Wiki</li>
                                         <li title="Google学术" data-url="https://scholar.google.com/scholar?hl=zh-CN&q="
                                             data-id="academicgoogle" data-note="确保网络可达"
                                             class="so-site-item so-site-id-academicgoogle">Google学术</li>
@@ -137,10 +137,9 @@
                                             data-note="请输入文献的标题、doi、url，直达SciHub可用站点（不支持文献搜索，只可下载唯一存在的论文）"
                                             class="so-site-item so-site-id-scihub">SciHub</li>
                                         <li title="中文最大的论文出版平台"
-                                            data-url="https://kns.cnki.net/kns/brief/default_result.aspx?txt_1_sel=SU$%=|&amp;txt_1_special1=%&amp;txt_extension=&amp;currentid=txt_1_value1&amp;dbJson=coreJson&amp;dbPrefix=SCDB&amp;db_opt=CJFQ,CDFD,CMFD,CPFD,IPFD,CCND,CCJD&amp;singleDB=SCDB&amp;db_codes=CJFQ,CDFD,CMFD,CPFD,IPFD,CCND,CCJD&amp;singleDBName=&amp;againConfigJson=false&amp;action=scdbsearch&amp;ua=1.11&amp;txt_1_value1="
+                                            data-url="https://kns.cnki.net/kns8s/defaultresult/index?kw="
                                             data-id="cnki" data-note="适合搜索中文文献" class="so-site-item so-site-id-cnki">
                                             中国知网</li>
-                                        
                                     </ul>
                                 </div>
 
@@ -165,7 +164,7 @@
                                         <li title="百度学术" data-url="https://xueshu.baidu.com/s?wd=" data-id="xueshubaidu"
                                             data-note="" class="so-site-item so-site-id-xueshubaidu">百度学术</li>
                                         <li title="中文最大的论文出版平台"
-                                            data-url="https://kns.cnki.net/kns/brief/default_result.aspx?txt_1_sel=SU$%=|&amp;txt_1_special1=%&amp;txt_extension=&amp;currentid=txt_1_value1&amp;dbJson=coreJson&amp;dbPrefix=SCDB&amp;db_opt=CJFQ,CDFD,CMFD,CPFD,IPFD,CCND,CCJD&amp;singleDB=SCDB&amp;db_codes=CJFQ,CDFD,CMFD,CPFD,IPFD,CCND,CCJD&amp;singleDBName=&amp;againConfigJson=false&amp;action=scdbsearch&amp;ua=1.11&amp;txt_1_value1="
+                                            data-url="中国知网"
                                             data-id="cnki" data-note="适合搜索中文文献" class="so-site-item so-site-id-cnki">
                                             中国知网</li>
                                         <li title="微软学术" data-url="https://academic.microsoft.com/search?q="
@@ -176,7 +175,7 @@
                                             data-id="ablescijournal" data-note="请输入期刊名称或ISSN"
                                             class="so-site-item so-site-id-ablescijournal">期刊查询</li>
                                         <li title="万方数据知识服务平台"
-                                            data-url="http://www.wanfangdata.com.cn/search/searchList.do?searchType=all&amp;showType=&amp;pageSize=&amp;isTriggerTag=&amp;searchWord="
+                                            data-url="https://s.wanfangdata.com.cn/paper?q="
                                             data-id="wangfang" data-note="适合搜索中文文献"
                                             class="so-site-item so-site-id-wangfang">万方</li>
                                     </ul>
@@ -207,12 +206,14 @@
                                             Google搜索</li>
                                         <li title="中文最大的搜索引擎" data-url="https://www.baidu.com/s?wd=" data-id="baidu"
                                             data-note="" class="so-site-item so-site-id-baidu">百度</li>
-                                        <li title="必应搜索" data-url="https://www.bing.com/search?q=" data-id="bingchina"
+                                        <li title="DuckGo" data-url="https://duckduckgo.com/q=" data-id="DuckGo"
+                                            data-note="" class="so-site-item so-site-id-DuckGo layui-this">DuckGo</li>
+                                        <li title="必应搜索（国内版）" data-url="https://www.bing.com/search?q=" data-id="bingchina"
                                             data-note="必应搜索（国内版），适合搜索中文资料" class="so-site-item so-site-id-bing">必应(ZH)</li>
-                                        <li title="必应搜索" data-url="https://www.bing.com/search?q=" data-id="bing"
+                                        <li title="必应搜索（国际版）" data-url="https://www.bing.com/search?q=" data-id="bing"
                                             data-note="必应搜索（国际版），适合搜索英文资料" class="so-site-item so-site-id-bing">必应(EN)</li>
-                                        <li title="Wiki搜索" data-url="http://www.wiki.com/results1.htm?cx=009420061493499222400%3Ae8sof1xaq-u&q=" data-id="wiki"
-                                            data-note="wikipedia，indie wiki和sencyclopedias的聚合搜索" class="so-site-item so-site-id-wiki">Wiki</li>
+                                        <li title="wikipedia" data-url="https://www.google.com/search?q=site%3Awikipedia.org+++" data-id="wiki"
+                                            data-note="使用谷歌调用wikipedia（wikipedia哪怕是中文镜像站也需要科学上网）" class="so-site-item so-site-id-wiki">wikipedia</li>
                                         <li title="俄罗斯第一大搜索引擎" data-url="https://yandex.com/search/?text="
                                             data-id="yandex" data-note="" class="so-site-item so-site-id-yandex">
                                             Yandex</li>
