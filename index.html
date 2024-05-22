@@ -31,19 +31,49 @@
         href="./resources/code.css" media="all"> -->
 
     <style>
-    .biglink{
-        font-size: 20px;
-        color: red;
-    }
-    .commonlink{
-        font-size: 15px;
-    }
-    .smalllink{
-        font-size: 10px;
-    }
-    .mininote{
-        font-size: 8.5px;
-    }
+		.biglink{
+			font-size: 20px;
+			color: red;
+		}
+		.commonlink{
+			font-size: 15px;
+		}
+		.smalllink{
+			font-size: 10px;
+		}
+		.mininote{
+			font-size: 8.5px;
+		}
+    </style>
+    <style>
+        .collapsible {
+         /*   cursor: pointer;
+            padding: 0;
+            border: none;
+            background: none;
+            color: blue;
+            text-decoration: underline;
+            font-size: 15px;
+            margin-left: 10px;*/
+        }
+
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #f9f9f9;
+        }
+
+        .link-container {
+          /*   display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center; 中心对齐 */
+        }
+
+        .link-container a {
+          /*   margin-right: 10px;  */
+        }
     </style>
 </head>
 
@@ -117,10 +147,10 @@
                                 <!-- 热门（默认选项） -->
                                 <div class="layui-tab so-site-tab so-category-id-hot" style="display: block;">
                                     <ul class="layui-tab-title">
-                                        <li title="DuckGo" data-url="https://duckduckgo.com/?q=" data-id="DuckGo"
-                                            data-note="" class="so-site-item so-site-id-DuckGo layui-this">DuckGo</li>
                                         <li title="中文最大的搜索引擎" data-url="https://www.baidu.com/s?wd=" data-id="baidu"
-                                            data-note="" class="so-site-item so-site-id-baidu">百度</li>
+                                            data-note="" class="so-site-item so-site-id-baidu layui-this">百度</li>
+                                        <li title="DuckGo" data-url="https://duckduckgo.com/?q=" data-id="DuckGo"
+                                            data-note="" class="so-site-item so-site-id-DuckGo">DuckGo</li>
                                         <li title="Google搜索" data-url="https://www.google.com/search?q="
                                             data-id="google" data-note="确保网络可达" class="so-site-item so-site-id-google">
                                             Google搜索</li>
@@ -205,9 +235,9 @@
                                             data-id="google" data-note="确保网络可达" class="so-site-item so-site-id-google">
                                             Google搜索</li>
                                         <li title="中文最大的搜索引擎" data-url="https://www.baidu.com/s?wd=" data-id="baidu"
-                                            data-note="" class="so-site-item so-site-id-baidu">百度</li>
+                                            data-note="" class="so-site-item so-site-id-baidu layui-this">百度</li>
                                         <li title="DuckGo" data-url="https://duckduckgo.com/?q=" data-id="DuckGo"
-                                            data-note="" class="so-site-item so-site-id-DuckGo layui-this">DuckGo</li>
+                                            data-note="" class="so-site-item so-site-id-DuckGo">DuckGo</li>
                                         <li title="必应搜索（国内版）" data-url="https://www.bing.com/search?q=" data-id="bingchina"
                                             data-note="必应搜索（国内版），适合搜索中文资料" class="so-site-item so-site-id-bing">必应(ZH)</li>
                                         <li title="必应搜索（国际版）" data-url="https://www.bing.com/search?q=" data-id="bing"
@@ -361,24 +391,50 @@
                             <a class="commonlink" href="https://mirrors.tuna.tsinghua.edu.cn">清华镜像</a> | 
                         </div>
                         <hr >
-                        <div>
+                        <div class="link-container">
                             翻译: | 
                             <a class="biglink" href="https://www.deepl.com/translator">DeepL</a> | 
-                            <a class="commonlink" href="https://fanyi.qq.com">腾讯翻译君</a> | 
                             <a class="biglink" href="https://fanyi.baidu.com/#en/zh/">百度</a> | 
-                            <a class="smalllink" href="https://translate.alibaba.com">阿里</a> | 
                             <a class="biglink" href="https://fanyi.youdao.com">有道</a> | 
-                            <a class="smalllink" href="https://translate.google.com">Google</a> | 
-                            <a class="smalllink" href="https://cn.bing.com/translator">Bing</a> | 
                             <a class="biglink" href="https://dict.cnki.net/index">CNKI</a> | 
-                            <a class="smalllink" href="https://fanyi.caiyunapp.com/#/">彩云</a> | 
-                            <a class="smalllink" href="https://ai.youdao.com/product-fanyi-text.s">智云</a> | 
-                            <a class="commonlink" href="https://fanyipdf.com/">一帆</a> | 
-                            <a class="smalllink" href="https://www.scidown.cn/fanyi.html">SCIDown</a> | 
-                            <a class="smalllink" href="https://openl.club">OpenL聚合</a> | 
-                            <a class="smalllink" href="https://fanyi.sogou.com/text">搜狗</a> | 
                             <a class="biglink" href="https://niutrans.com/Trans?type=text">小牛文档</a> | 
-                            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+                            <button type="button" class="collapsible" data-target="content-translate">更多翻译</button>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            
+                            写作: | 
+                            <a class="biglink" href="https://write.youdao.com/#/home">有道写作</a> | 
+                            <a class="biglink" href="https://cn.overleaf.com/login">Overleaf</a> | 
+                            <a class="biglink" href="https://www.deepl.com/write">DeepL写作</a> | 
+                            <a class="biglink" href="https://www.tablesgenerator.com">Latex表格</a> | 
+                            <button type="button" class="collapsible" data-target="content-writing">更多写作</button>
+                        </div>
+                        
+                        <div id="content-translate" class="content">
+							<div>
+								翻译: | 
+								<a class="biglink" href="https://fanyi.qq.com">腾讯翻译君</a> | 
+								<a class="smalllink" href="https://translate.alibaba.com">阿里</a> | 
+								<a class="smalllink" href="https://translate.google.com">Google</a> | 
+								<a class="smalllink" href="https://cn.bing.com/translator">Bing</a> | 
+								<a class="smalllink" href="https://fanyi.caiyunapp.com/#/">彩云</a> | 
+								<a class="smalllink" href="https://ai.youdao.com/product-fanyi-text.s">智云</a> | 
+								<a class="commonlink" href="https://fanyipdf.com/">一帆</a> | 
+								<a class="smalllink" href="https://www.scidown.cn/fanyi.html">SCIDown</a> | 
+								<a class="smalllink" href="https://openl.club">OpenL聚合</a> | 
+								<a class="smalllink" href="https://fanyi.sogou.com/text">搜狗</a> | 
+							</div>
+                        </div>
+                        
+                        <div id="content-writing" class="content">
+							<div>
+								写作: | 
+								<a class="biglink" href="https://app.grammarly.com/">Grammarly</a> | 
+								<a class="commonlink" href="https://fanyipdf.com/rewrite">一帆改写</a> | 
+								<a class="biglink" href="https://zbib.org/">Zbib</a> | 
+								<a class="commonlink" href="https://www.latexlive.com/home">Latex公式</a> | 
+								<a class="commonlink" href="https://www.bruot.org/ris2bib/">RIS转bib</a> | 
+								<a class="smalllink" href="https://ai.toedit.com/cg/login">toedit工具包</a> | 
+							</div>
                         </div>
                         <hr >
                         <div>
@@ -409,23 +465,9 @@
                             <a class="biglink" href="https://okmiku.com/">MikuTools</a> |
                             <a class="commonlink" href="https://codetoimg.com/">Code2Img</a> | 
                             <a class="smalllink" href="https://www.desmos.com/calculator">公式可视化</a> | 
-                            <a class="commonlink" href="https://regex101.com">正则工具</a> | 
+                            <a class="biglink" href="https://regex101.com">正则工具</a> | 
                             <a class="commonlink" href="https://sqliteviewer.app">SQLite</a> | 
                             <a class="commonlink" href="https://jsvine.github.io/nbpreview/">Jupyter</a> | 
-                        </div>
-                        <hr >
-                        <div>
-                            写作: | 
-                            <a class="biglink" href="https://app.grammarly.com/">Grammarly</a> | 
-                            <a class="biglink" href="https://write.youdao.com/#/home">有道写作</a> | 
-                            <a class="commonlink" href="https://www.deepl.com/write">DeepL写作</a> | 
-                            <a class="commonlink" href="https://fanyipdf.com/rewrite">一帆改写</a> | 
-                            <a class="smalllink" href="https://zbib.org/">Zbib</a> | 
-                            <a class="biglink" href="https://cn.overleaf.com/login">Overleaf</a> | 
-                            <a class="commonlink" href="https://www.tablesgenerator.com">Latex表格</a> | 
-                            <a class="smalllink" href="https://www.latexlive.com/home">Latex公式</a> | 
-                            <a class="smalllink" href="https://www.bruot.org/ris2bib/">RIS转bib</a> | 
-                            <a class="commonlink" href="https://ai.toedit.com/cg/login">toedit工具包</a> | 
                         </div>
                         <hr >
                         <div>
@@ -438,41 +480,98 @@
                             <a class="commonlink" href="https://www.researcher-app.com/feed/all">Researcher</a> | 
                         </div>
                         <hr >
-                        <div>
+                        <div class="link-container">
                             AI Chat: | 
                             <a class="biglink" href="https://chat.openai.com">ChatGPT</a> | 
                             <a class="biglink" href="https://gemini.google.com/chat">谷歌Gemini</a> | 
-                            <a class="smalllink" href="https://www.anthropic.com/">Claude</a> | 
-                            <a class="smalllink" href="https://www.bing.com/chat">NewBing</a> | 
+                            
                             <a class="biglink" href="https://www.coze.com/home">coze</a> | 
-                            <a class="commonlink" href="https://www.chatpdf.com/">ChatPDF</a> | 
-                            <a class="biglink" href="https://kimi.moonshot.cn">Kimi</a> | 
-                            <a class="commonlink" href="https://yiyan.baidu.com/">文心一言</a> | 
-                            <a class="commonlink" href="https://chat.baidu.com/">百度AI搜索</a> | 
-                            <a class="commonlink" href="https://tongyi.aliyun.com/qianwen">阿里通义</a> | 
-                            <a class="smalllink" href="https://hunyuan.tencent.com/">腾讯混元</a> | 
-                        </div>
-                        <div>
                             <a class="biglink" href="https://metaso.cn/">秘塔AI搜索</a> | 
-                            <a class="commonlink" href="https://huggingface.co/spaces/ShiwenNi/ChatResponse">回复意见</a> | 
-                            <a class="commonlink" href="https://huggingface.co/spaces/ShiwenNi/ChatReviewer">审稿</a> | 
-                            <a class="commonlink" href="https://huggingface.co/spaces/ShiwenNi/ChatPDF">PDF</a> | 
-                            <a class="smalllink" href="https://www.jasper.ai/">Jasper</a> | 
-                            <a class="smalllink" href="https://www.notion.so/">NotionAI</a> |
-                            <a class="commonlink" href="https://www.aigc520.com/">AI工具大全</a> | 
-                            <a class="commonlink" href="https://stepchat.cn/chats/90795353708548096">跃问</a> |
-                            <a class="commonlink" href="https://chatglm.cn/main/alltoolsdetail">智谱清言</a> |
-                            <a class="commonlink" href="https://echo.turing-world.com/index.html#/chat">Emohaa</a> |
+                            <a class="biglink" href="https://kimi.moonshot.cn">Kimi</a> | 
+                            
+                            <a class="biglink" href="https://chatgpt.com/?model=gpt-4o">ChatGPT镜像</a> | 
+                            <a class="commonlink" href="https://www.aishort.top/">中文prompts</a> | 
+
+                            <button type="button" class="collapsible" data-target="content-AIChat">AIChat</button>
+                            <button type="button" class="collapsible" data-target="content-3rdAI">第三方AI</button>
+                            <button type="button" class="collapsible" data-target="content-AIDraw">AI画图</button>
                         </div>
-                        <!--   <div>
-                            AI 画图: | 
-                            <a class="smalllink" href="https://yige.baidu.com/">文心一格</a> | 
-                            <a class="smalllink" href="https://www.midjourney.com/">midjourney</a> | 
-                            <a class="smalllink" href="https://firefly.adobe.com/">Adobe</a> | 
-                            <a class="smalllink" href="https://stability.ai/">Stable Diffusion</a> | 
-                            <a class="smalllink" href="https://openai.com/research/dall-e">DALL</a> | 
-                           <a class="smalllink" href="https://cn.bing.com/create">Bing</a> | 
-                        </div>  --> 
+                        
+                        <div id="content-AIChat" class="content">
+							<div>
+								<a class="commonlink" href="https://chat.baidu.com/">百度AI搜索</a> | 
+								<a class="commonlink" href="https://yiyan.baidu.com/">文心一言</a> | 
+								<a class="commonlink" href="https://tongyi.aliyun.com/qianwen">阿里通义</a> | 
+								<a class="commonlink" href="https://hunyuan.tencent.com/">腾讯混元</a> |
+								<a class="commonlink" href="https://stepchat.cn/chats/90795353708548096">跃问</a> |
+								<a class="commonlink" href="https://chatglm.cn/main/alltoolsdetail">智谱清言</a> |
+								<a class="commonlink" href="https://echo.turing-world.com/index.html#/chat">Emohaa</a> |
+								
+								<a class="smalllink" href="https://www.anthropic.com/">Claude</a> | 
+								<a class="smalllink" href="https://www.bing.com/chat">NewBing</a> | 
+								<a class="commonlink" href="https://www.chatpdf.com/">ChatPDF</a> | 
+								
+ 
+								<a class="commonlink" href="https://huggingface.co/spaces/ShiwenNi/ChatPDF">PDF</a> | 
+								<a class="smalllink" href="https://www.jasper.ai/">Jasper</a> | 
+								<a class="smalllink" href="https://www.notion.so/">NotionAI</a> |
+								<a class="commonlink" href="https://www.aigc520.com/">AI工具大全</a> | 
+
+							</div>
+                        </div>
+                        
+                        <div id="content-3rdAI" class="content">
+							<div>
+								ChatGPT镜像: | 
+								<a class="biglink" href="https://chatgpt.com/?model=gpt-4o">ChatGPT镜像</a> | 
+								<a class="smalllink" href="https://mirror.hematown.com/">河马ChatGPT</a> | 
+								<a class="smalllink" href="https://chat.okisdev.com/?mode=code">ChatGPT镜像oki</a> | 
+								<a class="smalllink" href="https://ai.okmiku.com/chat/">ChatGPT镜像okm</a> | 
+								
+								<a class="commonlink" href="https://bus.hematown.com/list">河马共享</a> | 
+								<a class="smalllink" href="https://terobox.com/">GPT账号分享</a> | 
+								<a class="smalllink" href="https://flowus.cn/warmo/share/0372e5be-de49-4aac-91c6-65fd06e34d78">GPT账号分享</a> | 
+								<a class="commonlink" href="https://flowus.cn/warmo/share/1cc7a353-fb5e-41de-9e89-29e58c9c53da?code=9VWFEX">GPT4账号分享</a> | 
+							</div>
+							<div>
+								第三方Chat推荐（包括国外）: | 
+								<a class="biglink" href="https://poe.monster/">Poe.Monster</a> | 
+								<a class="smalllink" href="https://poe.com/">POE</a> | 
+								<a class="biglink" href="https://site.easychat.work/">EasyChat发布页</a> | 
+								
+								<a class="commonlink" href="https://smith.langchain.com/">LangSmith</a> | 
+								<a class="commonlink" href="https://you.com/?chatMode=custom">You</a> | 
+ 								<a class="commonlink" href="https://chat.lmsys.org/">LMSYS</a> |
+ 								<a class="commonlink" href="https://groq.com/">GroqChat</a> |  
+								<a class="commonlink" href="https://app.txyz.ai/">TXYZ</a> |
+							</div>
+							<div>
+								工具和API: | 
+								<a class="commonlink" href="https://doc.baicaigpt.com/">白菜GPT</a> | 
+								<a class="commonlink" href="https://github.com/chatanywhere/GPT_API_free">chatanywhere</a> | 
+								<a class="commonlink" href="https://api2d.com/">API2D</a> | 
+								<a class="commonlink" href="https://openkey.cloud/register">OpenKEY</a> |
+							
+								<a class="commonlink" href="https://flowus.cn/warmo/share/efc1e6c4-9f29-4c48-9589-bda203ad5234">学术版GPT发布页</a> | 
+								<a class="commonlink" href="https://www.aishort.top/">中文prompts</a> | 
+								<a class="commonlink" href="https://prompts.chat/">英文prompts</a> | 
+								
+								<a class="commonlink" href="https://huggingface.co/spaces/ShiwenNi/ChatResponse">回复意见</a> | 
+								<a class="commonlink" href="https://huggingface.co/spaces/ShiwenNi/ChatReviewer">审稿</a> |
+							</div>
+                        </div>
+
+                        <div id="content-AIDraw" class="content">
+							<div>
+								AI 画图: | 
+								<a class="commonlink" href="https://yige.baidu.com/">文心一格</a> | 
+								<a class="commonlink" href="https://www.midjourney.com/">midjourney</a> | 
+								<a class="commonlink" href="https://firefly.adobe.com/">Adobe</a> | 
+								<a class="commonlink" href="https://stability.ai/">Stable Diffusion</a> | 
+								<a class="commonlink" href="https://openai.com/research/dall-e">DALL</a> | 
+								<a class="commonlink" href="https://cn.bing.com/create">Bing</a> | 
+							</div>
+                        </div>
                         <hr >
                         <div>
                             画图: | 
@@ -531,6 +630,22 @@
         </div>
     </div>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var coll = document.getElementsByClassName("collapsible");
+            for (var i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function () {
+                    var targetId = this.getAttribute("data-target");
+                    var content = document.getElementById(targetId);
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                    } else {
+                        content.style.display = "block";
+                    }
+                });
+            }
+        });
+    </script>
     <script>
         layui.use(['jquery', 'layer', 'form', 'element'], function () {
             var $ = layui.jquery,
