@@ -30,6 +30,9 @@ jobs:
 
       - name: Deploy to EdgeOne Pages
         run: |
-          keys=${{ secrets.EDGEONE_API_TOKENS }}; IFS='|' read -ra arr <<< "$str"; for item in "${arr[@]}"; do npx edgeone pages deploy ./ -n index -t "$item" -e production ; done
+          keys="${{ secrets.EDGEONE_API_TOKENS }}"
+          IFS='|'
+          read -ra arr <<< "$str"
+          for item in "${arr[@]}"; do npx edgeone pages deploy ./ -n index -t "$item" -e production ; done
         env:
           EDGEONE_API_TOKENS: ${{ secrets.EDGEONE_API_TOKENS }}
