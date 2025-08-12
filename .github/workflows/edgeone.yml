@@ -29,10 +29,6 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Deploy to EdgeOne Pages
-        run: |
-          keys="${{ secrets.EDGEONE_API_TOKENS }}"
-          IFS='|'
-          read -ra arr <<< "$str"
-          for item in "${arr[@]}"; do npx edgeone pages deploy ./ -n index -t "$item" -e production ; done
+        run: npx edgeone pages deploy ./ -n index -t ${{ secrets.EDGEONE_API_TOKEN }} -e production 
         env:
-          EDGEONE_API_TOKENS: ${{ secrets.EDGEONE_API_TOKENS }}
+          EDGEONE_API_TOKEN: ${{ secrets.EDGEONE_API_TOKEN }}
