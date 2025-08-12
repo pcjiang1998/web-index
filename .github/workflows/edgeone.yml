@@ -22,13 +22,37 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  deploy:
+  deploy-domain1:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
       - name: Deploy to EdgeOne Pages
-        run: npx edgeone pages deploy ./ -n index -t ${{ secrets.EDGEONE_API_TOKEN }} -e production 
+        run: npx edgeone pages deploy ./ -n index -t ${{ secrets.EDGEONE_API_TOKEN1 }} -e production 
         env:
-          EDGEONE_API_TOKEN: ${{ secrets.EDGEONE_API_TOKEN }}
+          EDGEONE_API_TOKEN1: ${{ secrets.EDGEONE_API_TOKEN1 }}
+          
+          
+  deploy-domain2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy to EdgeOne Pages
+        run: npx edgeone pages deploy ./ -n index -t ${{ secrets.EDGEONE_API_TOKEN2 }} -e production 
+        env:
+          EDGEONE_API_TOKEN2: ${{ secrets.EDGEONE_API_TOKEN2 }}
+          
+          
+  deploy-domain3:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy to EdgeOne Pages
+        run: npx edgeone pages deploy ./ -n index -t ${{ secrets.EDGEONE_API_TOKEN3 }} -e production 
+        env:
+          EDGEONE_API_TOKEN3: ${{ secrets.EDGEONE_API_TOKEN3 }}
